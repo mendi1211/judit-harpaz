@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>יהודית הרפז | צילום סטודיו, תדמית ובוקים | בית זית</title>
+<meta name="description" content="יהודית הרפז - צלמת סטודיו וצלמת חברתית מבית זית. צילומי נשים, תדמית ובוקים. תערוכות בתיאטרון ירושלים.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#161616;--muted:#6b6660;--paper:#f6f3ee;--line:#ddd6cc;--accent:#1f4e9c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Heebo,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;font-weight:300}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+h1,h2,h3,.serif{font-family:"Frank Ruhl Libre",serif;font-weight:500;line-height:1.15}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;color:var(--muted);font-weight:500}
+header{position:fixed;inset:0 0 auto 0;z-index:10;transition:background .3s}
+header.solid{background:rgba(246,243,238,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:"Frank Ruhl Libre",serif;font-size:1.35rem;text-decoration:none;color:#fff}
+.logo small{font-family:Heebo;font-size:.72rem;letter-spacing:.2em;opacity:.8;margin-right:8px}
+header.solid .logo{color:var(--ink)}
+.links{display:flex;gap:30px;list-style:none}
+.links a{text-decoration:none;color:#fff;font-size:.95rem;font-weight:400}
+header.solid .links a{color:var(--ink)}
+.hero{position:relative;height:100vh;min-height:620px;color:#fff;display:flex;align-items:flex-end}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.05) 35%,rgba(0,0,0,.72) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:90px;width:100%}
+.hero h1{font-size:clamp(2.6rem,6vw,5rem);max-width:760px;margin:14px 0 18px}
+.hero p{font-size:1.15rem;max-width:560px;opacity:.92}
+.hero .eyebrow{color:rgba(255,255,255,.8)}
+.btns{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 30px;text-decoration:none;font-weight:500;border:1px solid #fff;transition:.2s}
+.btn.fill{background:#fff;color:var(--ink)}
+.btn:hover{transform:translateY(-2px)}
+.credit{position:absolute;left:28px;bottom:26px;z-index:2;font-size:.75rem;opacity:.75}
+section{padding:110px 0}
+.intro{display:grid;grid-template-columns:1fr 1.4fr;gap:70px;align-items:start}
+.intro h2{font-size:clamp(2rem,3.6vw,3rem)}
+.intro p{font-size:1.12rem;color:#3b3833;margin-bottom:16px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:70px;border-top:1px solid var(--line)}
+.svc{padding:38px 30px 10px 30px;border-left:1px solid var(--line)}
+.svc:last-child{border-left:0}
+.svc .n{font-family:"Frank Ruhl Libre",serif;color:var(--accent);font-size:1.1rem}
+.svc h3{font-size:1.6rem;margin:10px 0 12px}
+.svc p{color:#4a463f}
+.dark{background:#141414;color:#eee}
+.dark .eyebrow{color:#a19a90}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(2rem,3.6vw,3rem)}
+.sec-head p{max-width:440px;color:#b8b1a6}
+.ex{display:grid;grid-template-columns:120px 1fr 1.1fr;gap:40px;padding:36px 0;border-top:1px solid #333;align-items:baseline}
+.ex:last-child{border-bottom:1px solid #333}
+.ex .yr{font-family:"Frank Ruhl Libre",serif;font-size:2.2rem;color:#fff}
+.ex h3{font-size:1.7rem;color:#fff}
+.ex .where{color:#a19a90;font-size:.92rem;margin-top:6px}
+.ex p{color:#cfc8bd}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:190px;gap:14px}
+.gallery figure{position:relative;overflow:hidden;background:#ddd}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;inset:auto 0 0 0;padding:26px 16px 12px;color:#fff;font-size:.88rem;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.g1{grid-column:span 4;grid-row:span 2}.g2{grid-column:span 2;grid-row:span 2}
+.g3{grid-column:span 2;grid-row:span 2}.g4{grid-column:span 2;grid-row:span 2}.g5{grid-column:span 2;grid-row:span 2}
+.g6{grid-column:span 3;grid-row:span 2}.g7{grid-column:span 3;grid-row:span 2}
+.quote{text-align:center;max-width:860px;margin:0 auto}
+.quote blockquote{font-family:"Frank Ruhl Libre",serif;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.45}
+.quote cite{display:block;margin-top:24px;font-style:normal;color:var(--muted)}
+.about{display:grid;grid-template-columns:.9fr 1.2fr;gap:80px;align-items:center}
+.about img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:30% 40%}
+.about h2{font-size:clamp(2rem,3.6vw,3rem);margin:12px 0 22px}
+.about p{font-size:1.08rem;color:#3b3833;margin-bottom:14px}
+.facts{display:flex;gap:40px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+.facts b{display:block;font-family:"Frank Ruhl Libre",serif;font-size:2.2rem;font-weight:500}
+.facts span{color:var(--muted);font-size:.9rem}
+.contact{background:#ebe6dd}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.contact h2{font-size:clamp(2.2rem,4vw,3.4rem);margin:12px 0 18px}
+.contact p{font-size:1.1rem;color:#3b3833}
+form{display:grid;gap:14px}
+input,select,textarea{font:inherit;padding:15px 16px;border:1px solid #cfc6b8;background:#fbf9f5;color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+button{font:inherit;font-weight:500;padding:16px;background:var(--ink);color:#fff;border:0;cursor:pointer}
+.note{font-size:.82rem;color:var(--muted)}
+footer{padding:34px 0;font-size:.85rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:860px){
+ .links{display:none}
+ .wrap{padding:0 20px}
+ section{padding:76px 0}
+ .hero{min-height:560px;height:92vh}
+ .hero .wrap{padding-bottom:64px}
+ .hero p{font-size:1.02rem}
+ .credit{display:none}
+ .intro,.about,.contact .grid{grid-template-columns:1fr;gap:36px}
+ .services{grid-template-columns:1fr;margin-top:44px}
+ .svc{border-left:0;border-bottom:1px solid var(--line);padding:28px 0}
+ .ex{grid-template-columns:1fr;gap:8px;padding:28px 0}
+ .ex .yr{font-size:1.6rem}
+ .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:10px}
+ .g1{grid-column:span 2;grid-row:span 2}.g2,.g3,.g4,.g5{grid-column:span 1;grid-row:span 2}
+ .g6,.g7{grid-column:span 2;grid-row:span 2}
+ .facts{gap:26px}
+}
+</style>
+</head>
+<body>
+<header id="top">
+ <nav class="wrap">
+  <a class="logo" href="#">יהודית הרפז<small>צילום</small></a>
+  <ul class="links">
+   <li><a href="#services">צילום</a></li>
+   <li><a href="#exhibitions">תערוכות</a></li>
+   <li><a href="#work">עבודות</a></li>
+   <li><a href="#about">אודות</a></li>
+   <li><a href="#contact">צרו קשר</a></li>
+  </ul>
+ </nav>
+</header>
+
+<section class="hero" style="padding:0">
+ <img src="img/cardo.jpg" alt="הקרדו ברובע היהודי עם דגלי ישראל. צילום: יהודית הרפז">
+ <div class="wrap">
+  <div class="eyebrow">צילום סטודיו · תדמית · בוקים · בית זית</div>
+  <h1>צילום שמסתכל לאנשים בעיניים</h1>
+  <p>יהודית הרפז, צלמת סטודיו וצלמת חברתית. מצלמת בעיקר נשים, בסטודיו וברחוב, ומציגה תערוכות בתיאטרון ירושלים.</p>
+  <div class="btns">
+   <a class="btn fill" href="#contact">לתיאום צילום</a>
+   <a class="btn" href="#exhibitions">התערוכות</a>
+  </div>
+ </div>
+ <div class="credit">מתוך "הדגל שלי - בכל מצב" · צילום: יהודית הרפז</div>
+</section>
+
+<section id="services">
+ <div class="wrap">
+  <div class="intro">
+   <div>
+    <div class="eyebrow">צילום</div>
+    <h2>הצילום שלכם, עם אותו מבט שמאחורי התערוכות</h2>
+   </div>
+   <div>
+    <p>"אני צלמת, העוסקת בסטודיו שלי עם נשים ואוהבת לתרום לחברה." כך יהודית מתארת את העבודה שלה. אותה סקרנות לאנשים שהובילה אותה לצלם 70 נשים ו-68 זוגות עיניים ברחבי הארץ, עומדת גם מאחורי כל צילום אישי.</p>
+    <p>היא נותנת למצולמים לבחור מקום, חפץ או אדם שמספר משהו עליהם, והתוצאה היא תמונה שנראית כמוכם ולא כמו עוד תמונה.</p>
+   </div>
+  </div>
+  <div class="services">
+   <div class="svc"><div class="n">01</div><h3>צילומי סטודיו</h3><p>צילום פורטרט בסטודיו, בדגש על צילומי נשים. זמן לשיחה, להיכרות ולמצוא את המבט הנכון.</p></div>
+   <div class="svc"><div class="n">02</div><h3>צילומי תדמית</h3><p>תמונה מקצועית לעסק, לאתר ולרשתות, שנראית אמינה ואישית.</p></div>
+   <div class="svc"><div class="n">03</div><h3>בוקים</h3><p>סדרת צילומים אישית, בסטודיו או במקום שבחרתם, שמספרת סיפור אחד שלם.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark" id="exhibitions">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><div class="eyebrow">תערוכות</div><h2>עשור של צילום חברתי</h2></div>
+   <p>פרויקטים ארוכים שבהם יהודית יוצאת עם מצלמה ויומן לפגוש אנשים בכל רחבי הארץ.</p>
+  </div>
+  <div class="ex"><div class="yr">2026</div><div><h3>כביש 1 - בין קודש לחול</h3><div class="where">תיאטרון ירושלים · עם הצלם מאיר אליפור</div></div><p>כ-120 צילומים אנושיים ותיעודיים על הדומה והשונה בין ירושלים לתל אביב, ועל הכביש שמחבר ביניהן.</p></div>
+  <div class="ex"><div class="yr">2020</div><div><h3>הדגל שלי - בכל מצב</h3><div class="where">תערוכה מקוונת ליום העצמאות ה-72</div></div><p>72 תמונות צבע של דגל ישראל, שנאספו במשך עשור בארץ ובעולם. תוכננה לגלריה ועלתה לרשת בגלל הקורונה.</p></div>
+  <div class="ex"><div class="yr">2018</div><div><h3>נשים שבעים</h3><div class="where">תיאטרון ירושלים · 70 שנה למדינה</div></div><p>70 נשים ישראליות מגיל שנה עד 70, בשחור-לבן. שנה של מסע ברחבי הארץ, ביניהן ירדנה ארזי, רונה רמון ואופירה אסייג.</p></div>
+  <div class="ex"><div class="yr">2016</div><div><h3>העיניים של המדינה</h3><div class="where">תיאטרון ירושלים · עם הצלם מאיר אליפור</div></div><p>68 זוגות עיניים של אנשים מהחברה הישראלית, מקריית שמונה ועד אילת, ובהם הנשיא ראובן ריבלין ודוד רובינגר.</p></div>
+ </div>
+</section>
+
+<section id="work">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><div class="eyebrow">עבודות</div><h2 style="color:var(--ink)">מתוך "הדגל שלי - בכל מצב"</h2></div>
+   <p style="color:var(--muted)">"צילמתי אותו במצבים הכי אינטימיים שיש." מבחר מתוך 72 התמונות.</p>
+  </div>
+  <div class="gallery">
+   <figure class="g1"><img src="img/dan.jpg" alt="דן בירן עם דגל"><figcaption>דן בירן, שהניף את הדגל על הר הבית</figcaption></figure>
+   <figure class="g2"><img src="img/david.jpg" alt="דוד כהן מחופש לדגל"><figcaption>דוד כהן, בן 88, בחדרו</figcaption></figure>
+   <figure class="g3"><img src="img/arik.jpg" alt="קברו של אריק איינשטיין"><figcaption>קברו של אריק איינשטיין</figcaption></figure>
+   <figure class="g4"><img src="img/kingdavid.jpg" alt="דגלים מעל מלון המלך דוד"><figcaption>מעל מלון המלך דוד</figcaption></figure>
+   <figure class="g5"><img src="img/pride.jpg" alt="גאווה לאומית"><figcaption>גאווה לאומית</figcaption></figure>
+   <figure class="g6"><img src="img/world.jpg" alt="דגל ישראל בעיר בחו&quot;ל"><figcaption>בעולם הגדול</figcaption></figure>
+   <figure class="g7"><img src="img/cardo.jpg" alt="ירושלים של זהב"><figcaption>ירושלים של זהב</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:20px">
+ <div class="wrap quote">
+  <blockquote>"אני מקווה שהתערוכה תפתח בכל אחת ואחד צוהר לראייה מקרבת, מחברת ואוהבת, ושתסייע לנו לראות את הטוב זה בזה."</blockquote>
+  <cite>יהודית הרפז, בפתיחת "כביש 1", תיאטרון ירושלים 2026</cite>
+ </div>
+</section>
+
+<section id="about" style="padding-top:30px">
+ <div class="wrap about">
+  <img src="img/judit.jpg" alt="יהודית הרפז">
+  <div>
+   <div class="eyebrow">אודות</div>
+   <h2>יהודית הרפז</h2>
+   <p>צלמת חברתית, ילידת חיפה ותושבת בית זית. מצלמת בעיקר צילומי נשים, סטודיו ורחוב, ושואפת דרך הצילום לתת ערך לחברה הישראלית על כל גווניה.</p>
+   <p>בוגרת האוניברסיטה העברית במתמטיקה ולשון, למדה משפטים והוסמכה לעריכת דין. כותבת את הבלוג "אישה ועדשה" על צילום, טיולים והחיים בכלל.</p>
+   <div class="facts">
+    <div><b>4</b><span>תערוכות מאז 2016</span></div>
+    <div><b>70</b><span>נשים ב"נשים שבעים"</span></div>
+    <div><b>68</b><span>זוגות עיניים</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap grid">
+  <div>
+   <div class="eyebrow">צרו קשר</div>
+   <h2>צרו קשר, ויהיה כיף</h2>
+   <p>צילום סטודיו, תדמית או בוק? ספרו מה אתם מחפשים ויהודית תחזור אליכם לתאם.</p>
+   <p style="margin-top:14px;color:var(--muted)">סטודיו בבית זית.</p>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('button').textContent='תודה! נחזור אליכם בקרוב'">
+   <input required placeholder="שם מלא">
+   <input required type="tel" placeholder="טלפון">
+   <select><option>צילומי סטודיו</option><option>צילומי תדמית</option><option>בוק</option><option>אחר</option></select>
+   <textarea placeholder="ספרו קצת על הצילום שאתם מחפשים"></textarea>
+   <button type="submit">שליחה</button>
+  </form>
+ </div>
+</section>
+
+<footer><div class="wrap"><span>© יהודית הרפז · צילום · בית זית</span><span>כל הצילומים: יהודית הרפז</span></div></footer>
+
+<script>
+const h=document.getElementById('top');
+const f=()=>h.classList.toggle('solid',scrollY>60);f();addEventListener('scroll',f);
+</script>
+</body>
+</html>
