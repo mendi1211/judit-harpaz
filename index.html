@@ -86,6 +86,11 @@ form{display:grid;gap:14px}
 input,select,textarea{font:inherit;padding:15px 16px;border:1px solid #cfc6b8;background:#fbf9f5;color:var(--ink)}
 textarea{min-height:110px;resize:vertical}
 button{font:inherit;font-weight:500;padding:16px;background:var(--ink);color:#fff;border:0;cursor:pointer}
+.cbtns{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.cbtn{padding:13px 26px;border:1px solid var(--ink);text-decoration:none;font-weight:500}
+.cbtn.wa{background:#1f7a4d;border-color:#1f7a4d;color:#fff}
+.fab{position:fixed;left:20px;bottom:20px;z-index:20;width:56px;height:56px;border-radius:50%;background:#1f7a4d;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .3s}
+.fab.on{opacity:1;pointer-events:auto}
 .note{font-size:.82rem;color:var(--muted)}
 footer{padding:34px 0;font-size:.85rem;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
@@ -219,20 +224,31 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
    <h2>צרו קשר, ויהיה כיף</h2>
    <p>צילום סטודיו, תדמית או בוק? ספרו מה אתם מחפשים ויהודית תחזור אליכם לתאם.</p>
    <p style="margin-top:14px;color:var(--muted)">סטודיו בבית זית.</p>
+   <div class="cbtns">
+    <a class="cbtn wa" href="https://wa.me/972545910348?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%95%D7%93%D7%99%D7%AA%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A6%D7%99%D7%9C%D7%95%D7%9D" target="_blank" rel="noopener">וואטסאפ</a>
+    <a class="cbtn" href="tel:+972545910348" dir="ltr">054-591-0348</a>
+   </div>
+   <p style="margin-top:12px"><a href="mailto:juditharpaz@gmail.com" dir="ltr" style="color:var(--muted)">juditharpaz@gmail.com</a></p>
   </div>
-  <form onsubmit="event.preventDefault();this.querySelector('button').textContent='תודה! נחזור אליכם בקרוב'">
-   <input required placeholder="שם מלא">
-   <input required type="tel" placeholder="טלפון">
-   <select><option>צילומי סטודיו</option><option>צילומי תדמית</option><option>בוק</option><option>אחר</option></select>
-   <textarea placeholder="ספרו קצת על הצילום שאתם מחפשים"></textarea>
-   <button type="submit">שליחה</button>
+  <form id="cf">
+   <input required name="n" placeholder="שם מלא">
+   <input required name="t" type="tel" placeholder="טלפון">
+   <select name="k"><option>צילומי סטודיו</option><option>צילומי תדמית</option><option>בוק</option><option>אחר</option></select>
+   <textarea name="m" placeholder="ספרו קצת על הצילום שאתם מחפשים"></textarea>
+   <button type="submit">שליחה בוואטסאפ</button>
   </form>
  </div>
 </section>
 
 <footer><div class="wrap"><span>© יהודית הרפז · צילום · בית זית</span><span>כל הצילומים: יהודית הרפז</span></div></footer>
 
+<a class="fab" id="fab" href="https://wa.me/972545910348" target="_blank" rel="noopener" aria-label="וואטסאפ"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
 <script>
+document.getElementById('cf').addEventListener('submit',e=>{e.preventDefault();const f=e.target;
+const txt='היי יהודית, הגעתי מהאתר.\nשם: '+f.n.value+'\nטלפון: '+f.t.value+'\nסוג צילום: '+f.k.value+(f.m.value?'\n'+f.m.value:'');
+window.open('https://wa.me/972545910348?text='+encodeURIComponent(txt),'_blank');});
+const fab=document.getElementById('fab');
+const g=()=>fab.classList.toggle('on',scrollY>innerHeight*0.9);g();addEventListener('scroll',g);
 const h=document.getElementById('top');
 const f=()=>h.classList.toggle('solid',scrollY>60);f();addEventListener('scroll',f);
 </script>
